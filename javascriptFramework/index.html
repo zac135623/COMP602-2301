@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>Web Dev Stuff Inc</title>
 
+    <script src="https://unpkg.com/vue@2.6.14"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -199,23 +201,42 @@
         </div>
     </div>
 
+    <div id="app">
+        <footer-temp></footer-temp>
+    </div>
+
+    <template id="footer-temp">
+        <footer class="footer py-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>&copy; 2023 Web Dev Stuff Inc. All rights reserved.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul class="list-inline text-sm-right">
+                            <li class="list-inline-item">Email Address: inquire@webdevstuff.com</li>
+                            <li class="list-inline-item">Phone Number: 0800 456 7822</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </template>
+
+    <script>
+        Vue.component('footer-temp', {
+            template: '#footer-temp'
+        });
+
+        new Vue({
+            el: '#app'
+        });
+    </script>
 </body>
 
-<footer class="footer py-3">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6">
-                <p>&copy; 2023 Web Dev Stuff Inc. All rights reserved.</p>
-            </div>
-            <div class="col-sm-6">
-                <ul class="list-inline text-sm-right">
-                    <li class="list-inline-item">Email Address: inquire@webdevstuff.com</li>
-                    <li class="list-inline-item">Phone Number: 0800 456 7822</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+
+
+
 
 
 </html>
